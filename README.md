@@ -33,7 +33,7 @@ O governo do Brasil precisa entender quais as principais causas de acidentes de 
 ## Explicação do Projeto
 
 
-## Resiultados
+## Resultados
 
 
 ## Referências
