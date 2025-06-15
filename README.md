@@ -37,4 +37,5 @@ O governo do Brasil precisa entender quais as principais causas de acidentes de 
 
 
 ## Referências
--[dataset] (https://www.kaggle.com/datasets/mlippo/car-accidents-in-brazil-2017-2023?select=accidents_2017_to_2023_portugues.csv)  
+- [Dataset](https://www.kaggle.com/datasets/mlippo/car-accidents-in-brazil-2017-2023?select=accidents_2017_to_2023_portugues.csv) 
+in 13/06/2025

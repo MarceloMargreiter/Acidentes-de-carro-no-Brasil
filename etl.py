@@ -1,4 +1,9 @@
 import extract
+import transform
+import load
+
+
+# ===== EXTRACT =====
 
 if __name__=="__main__":
     # Define o caminho do arquivo CSV
@@ -14,9 +19,28 @@ if __name__=="__main__":
     table_name = "acidentes"
     extract.create_table(db_name, table_name)
     extract.insert_data(data, db_name, table_name)
+    print(f"\n Extract completed. \n ")
+
+# ===== TRANSFORM =====
+
+    # Lê os dados da tabela SQLite
+    stage_data = transform.read_sqlite(db_name, table_name)
+    # Analisa os dados para verificar transformações necessárias
+    stage_data = transform.analyse_data(stage_data)
+    # Transforma coluna em tipo text novamente porque o SQLite não suporta Datetime.
+    stage_data = transform.transform_data_inversa_to_date(stage_data)
+    print(f"\nTransform completed.\n")
+
+# ===== LOAD =====
+
+     # Cria o datawarehouse
+    db_name = "databases/datawarehouse.db"
+    table_name = "acidentes"
+    load.create_database(db_name)
+    # Cria a tabela e insere os dados
+    load.create_table(db_name, table_name)
+    load.insert_data(stage_data, db_name, table_name)
+    print(f"\nLoad completed.\n")
 
 
-
-
-
-    ## PAREI NOS 01:10 DA AULA 1
+    ## PAREI NOS 01:1012 DA AULA 2
