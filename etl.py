@@ -43,4 +43,4 @@ if __name__=="__main__":
     print(f"\nLoad completed.\n")
 
 
-    ## PAREI NOS 01:1012 DA AULA 2
+    ## PAREI NOS 01:12 DA AULA 2
